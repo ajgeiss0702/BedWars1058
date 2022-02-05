@@ -84,12 +84,12 @@ public class Inventory implements Listener {
         if (e.getCursor() != null) {
             if (e.getCursor().getType() != Material.AIR) {
                 if (e.getClickedInventory() == null) {
-                    if (isCommandItem(e.getCursor())) {
+                    if (isCommandItem(e.getCursor()) || BedWars.nms.isSword(e.getCursor())) {
                         e.getWhoClicked().closeInventory();
                         e.setCancelled(true);
                     }
                 } else if (e.getClickedInventory().getType() != e.getWhoClicked().getInventory().getType()) {
-                    if (isCommandItem(e.getCursor())) {
+                    if (isCommandItem(e.getCursor()) || BedWars.nms.isSword(e.getCursor())) {
                         e.getWhoClicked().closeInventory();
                         e.setCancelled(true);
                     }
@@ -103,12 +103,12 @@ public class Inventory implements Listener {
         if (e.getCurrentItem() != null) {
             if (e.getCurrentItem().getType() != Material.AIR) {
                 if (e.getClickedInventory() == null) {
-                    if (isCommandItem(e.getCurrentItem())) {
+                    if (isCommandItem(e.getCurrentItem()) || BedWars.nms.isSword(e.getCurrentItem())) {
                         e.getWhoClicked().closeInventory();
                         e.setCancelled(true);
                     }
                 } else if (e.getClickedInventory().getType() != e.getWhoClicked().getInventory().getType()) {
-                    if (isCommandItem(e.getCurrentItem())) {
+                    if (isCommandItem(e.getCurrentItem()) || BedWars.nms.isSword(e.getCurrentItem())) {
                         e.getWhoClicked().closeInventory();
                         e.setCancelled(true);
                     }
