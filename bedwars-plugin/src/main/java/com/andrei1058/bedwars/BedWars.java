@@ -139,7 +139,7 @@ public class BedWars extends JavaPlugin {
         try {
             Class.forName("org.spigotmc.SpigotConfig");
         } catch (Exception ignored) {
-            this.getLogger().severe("I can't run on your server software. Please check:");
+            this.getLogger().severe("I can't run on your server software. Please check: hi");
             this.getLogger().severe("https://gitlab.com/andrei1058/BedWars1058/wikis/compatibility");
             serverSoftwareSupport = false;
             return;
